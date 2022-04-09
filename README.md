@@ -1,7 +1,8 @@
 # staff detection
 
 ```java
-    List<String> blocksMcStaff = getList("https://raw.githubusercontent.com/Fxcilities/blocksmcstaff/main/blocksmc.txt");
+    String server = "blocksmc"; // OPTIONS: blocksmc, vipermc
+    List<String> blocksMcStaff = getList("https://raw.githubusercontent.com/Fxcilities/blocksmcstaff/main/" + server + ".txt");
 
     /**
      * @author Fxcilities
