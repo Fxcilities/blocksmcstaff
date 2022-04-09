@@ -1,3 +1,27 @@
-# blocksmcstaff
+# staff detection
 
-il run the script to update this everyday, and if it gains a stable enough reputation of never breaking randomly, il put it on a vps
+```java
+    List<String> blocksMcStaff = getList("https://raw.githubusercontent.com/Fxcilities/blocksmcstaff/main/blocksmc.txt");
+
+    /**
+     * @author Fxcilities
+     */
+    public static List<String> getList(String rawUrl) throws IOException {
+        List<String> result = new ArrayList<>();
+
+        URL url = new URL(rawUrl);
+        URLConnection conn = url.openConnection();
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(
+                        conn.getInputStream()));
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
+            inputLine = inputLine.replace("\n", "");
+            if (inputLine.startsWith("#") || inputLine.equals("")) continue;
+            result.add(inputLine);
+        }
+
+        in.close();
+        return result;
+    }
+```
