@@ -1,4 +1,4 @@
-# staff detection
+# staff detection [OUTDATED]
 
 ```java
     String server = "blocksmc"; // OPTIONS: blocksmc
