@@ -1,7 +1,7 @@
 # staff detection
 
 ```java
-    String server = "blocksmc"; // OPTIONS: blocksmc, vipermc
+    String server = "blocksmc"; // OPTIONS: blocksmc
     List<String> blocksMcStaff = getList("https://raw.githubusercontent.com/Fxcilities/blocksmcstaff/main/" + server + ".txt");
 
     /**
